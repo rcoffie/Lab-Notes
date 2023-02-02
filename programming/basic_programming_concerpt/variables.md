@@ -40,8 +40,6 @@ int main() {
 }
 
 ```
-
-
 ## Listed below are the key points about variables that you need to keep in mind −
 
 - A variable name can hold a single type of value. For example, if variable a has been defined int type, then it can store only integer.
@@ -57,8 +55,6 @@ int main() {
 - Almost none of the programming languages allow to start their variable names with a digit, so 1990year will not be a valid variable name whereas year1990 or ye1990ar are valid variable names
 
 Every programming language provides more rules related to variables and you will learn them when you will go in further detail of that programming language.
-
-
 
 ## Store Values in Variables 
 
@@ -145,3 +141,4 @@ Value of a = 10 and value of b = 20
 ```
 
 If you want to use float variable in C programming, then you will have to use %f instead of %d, and if you want to print a character value, then you will have to use %c. Similarly, different data types can be printed using different % and characters.
+
