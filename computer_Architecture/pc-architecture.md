@@ -9,7 +9,7 @@ designing a super computer is different from designing a smartphone but many Fun
 ### Previous Computer CPU Design
 ## Previous PC Architecture
 
-![App Screenshot](https://via.placeholder.com/468x300?text=App+Screenshot+Here)
+![First PC Architecture](https://user-images.githubusercontent.com/34107104/216494450-69628d14-1355-4baf-8df4-73a4f886dda2.png)
 
 previously  computer CPU (Central Processing Unit) was connected to component on the motherboard indirectly.\
 The central  processing unit **(CPU)** include an Arithmetic Logical Unit **(ALCU)**
@@ -28,7 +28,8 @@ The north bridge and the south bridge were collectively referred to as the chips
 
 ## The Modern PC Architecture
 
-![App Screenshot](https://via.placeholder.com/468x300?text=App+Screenshot+Here)
+![modern arch](https://user-images.githubusercontent.com/34107104/216494774-5248a898-6f85-4728-8b57-f041f3ae084b.png)
+
 
 The modern CPU of a PC is likely to have multiple physical core, at least a modern day pc has two cores but can go up from four to eight and more.
 Each core has it own ALU, Control Unit and it own sets or registers . Each core is cable of executing a program instruction independently . most modern software are guild to make use of multiple  cores this increase performance.
