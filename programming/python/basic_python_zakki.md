@@ -485,8 +485,7 @@ A for loop in Python is used to iterate over a sequence (list, tuple, set, dicti
 
 ## Flow Chat 
 
-![App Screenshot](https://via.placeholder.com/468x300?text=App+Screenshot+Here)
-
+![for-loop](https://user-images.githubusercontent.com/34107104/218073117-3ffa3003-c5e9-4d2d-ba68-43009cf1ef04.JPG)
 
 ```python
 #iterate throught a list 
@@ -507,7 +506,7 @@ The while loop is used to execute a set of statements as long as a condition is 
 
 ## Flow Chat 
 
-![App Screenshot](https://via.placeholder.com/468x300?text=App+Screenshot+Here)
+![whileloop](https://user-images.githubusercontent.com/34107104/218073183-267b187e-eaa7-48ee-bc8a-a9ab0de68b06.JPG)
 
 ```python
 #while loop 
@@ -528,7 +527,8 @@ Decision making statements are used to execute the statements onlyu when a parti
 
 ## Flow Chat 
 
-![App Screenshot](https://via.placeholder.com/468x300?text=App+Screenshot+Here)
+
+![conditional-statement](https://user-images.githubusercontent.com/34107104/218073246-fe42f0b3-3514-4cf3-9a2e-116da0ce8cf0.JPG)
 
 
 
