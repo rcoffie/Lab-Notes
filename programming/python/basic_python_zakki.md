@@ -734,3 +734,417 @@ Emil Refsnes
 - [w3schools](https://www.w3schools.com/python/python_functions.asp)
 - [realpython](https://realpython.com/)
 - [Geek for Geeks ](https://www.geeksforgeeks.org/)
+
+<mark >Highlighted text</mark>
+
+
+## Python Classes 
+
+A class is considered as a blueprint of objects. We can think of the class as a sketch (prototype) of a house. It contains all the details about the floors, doors, windows, etc. Based on these descriptions we build the house. House is the object.
+
+Since many houses can be made from the same description, we can create many objects from a class.
+
+
+## Define Python Class 
+
+We use the  keyword to create a <mark> Highlighted text </mark> class in Python. For example 
+
+```python
+class ClassName:
+    # class definition   
+```
+Here, we have created a class name <marked> ClassName </marked>
+
+Let's see an example 
+
+```python
+class Bike:
+    name = ""
+    gear = 0  
+```
+<marked> BIke </marked> - the name of the class 
+
+<marked> name/gear </marked> - variables inside the class with default values "" and 0 respectively
+
+## Python objects
+
+An object is called an instance of a class. For example, suppose Bike is a class then we can create objects like <marked> bike1 </marked> bike1, <marked> bike2 </marked>, etc from the class.
+
+Here's the syntax to create an object.
+
+```python
+objectName = ClassName() 
+```
+Let's see an example,
+
+```python
+# create class
+class Bike:
+    name = ""
+    gear = 0
+
+# create objects of class
+bike1 = Bike()
+```
+## Access Class Attributes Using Objects
+
+We use the ```.``` notation to access the attributes of a class. For example,
+
+```python
+# modify the name attribute
+bike1.name = "Mountain Bike"
+
+# access the gear attribute
+bike1.gear
+
+```
+Here, we have used <marked> bike1.name </marked>  and <marked> bike1.gear </marked>  to change and access the value of <marked> name </marked>  and <marked> gear </marked>  attribute respectively.
+
+## Examples of python Class and objects 
+
+```python
+# define a class
+class Bike:
+    name = ""
+    gear = 0
+
+# create object of class
+bike1 = Bike()
+
+# access attributes and assign new values
+bike1.gear = 11
+bike1.name = "Mountain Bike"
+
+print(f"Name: {bike1.name}, Gears: {bike1.gear} ")
+
+```
+Output 
+
+```python
+# define a class
+Name: Mountain Bike, Gears: 11
+
+```
+
+In the above example, we have defined the class named Bike with two attributes: ``` name``` and  ``` gear ```.
+
+## Created Multiple Objects of Python Class 
+We can also create mulitple objects from a sinlge class for example 
+
+```python
+# define a class
+class Employee:
+    # define an attribute
+    employee_id = 0
+
+# create two objects of the Employee class
+employee1 = Employee()
+employee2 = Employee()
+
+# access attributes using employee1
+employee1.employeeID = 1001
+print(f"Employee ID: {employee1.employeeID}")
+
+# access attributes using employee2
+employee2.employeeID = 1002
+print(f"Employee ID: {employee2.employeeID}")
+
+```
+
+Output 
+
+
+```python
+Employee ID: 1001
+Employee ID: 1002
+```
+## Python Methods 
+In the above example, we have created two objects employee1 and employee2 of the Employee class.
+
+```python
+# create a class
+class Room:
+    length = 0.0
+    breadth = 0.0
+    
+    # method to calculate area
+    def calculate_area(self):
+        print("Area of Room =", self.length * self.breadth)
+
+# create object of Room class
+study_room = Room()
+
+# assign values to all the attributes 
+study_room.length = 42.5
+study_room.breadth = 30.8
+
+# access method inside class
+study_room.calculate_area()
+```
+
+Output 
+
+
+```python
+Area of Room = 1309.0
+```
+
+In the above example, we have created a class named Room with:
+
+Attributes ``` length ```  and ``` breath ``` 
+
+Method:  ``` calulate_area() ```
+
+Here, we have created an object name ``` study_room ``` from the Room class. We then used objects to assign values to attributes ```length``` and ``` breath ```
+
+## Python Constructors
+
+## Python Constructors 
+Earlier we assigned a default value to a clas attribute
+
+```python
+class Bike:
+    name = ""
+...
+# create object
+bike1 = Bike()
+```
+However, we can also initializxe valuies using the Constructors. For example 
+
+```python
+class Bike:
+
+    # constructor function    
+    def __init__(self, name = ""):
+        self.name = name
+
+bike1 = Bike()
+```
+
+Here, ```__init__()``` is the constructor function that is called whenever a new object of that class is instantiated.
+
+The constructor above initializes the value of the ```name``` attribute. We have used the  ```self.name``` to refer to the ```name``` attribute of the ```bike1``` object.
+
+If we use a constructor to initialize values inside a class, we need to pass the corresponding value during the object creation of the class.
+
+```python
+bike1 = Bike("Mountain Bike")
+```
+
+Here, ```Mountain Bike``` is passed to the ```name``` parameter of ```__init__()```.
+
+## Resource
+
+[Programiz](https://www.programiz.com/python-programming/class)
+
+
+
+## File Handling in Python - How to Create, Read and Write to a FIle 
+
+File handling is an important activity in every web app. The types of activities that you can perform on the opened file are controlled by Access Modes. These describe how the file will be used after it has been opened.
+
+These modes also specify where the file handle should be located within the file. Similar to a pointer, a file handle indicates where data should be read or put into the file.
+
+In Python, there are six methods or access modes, which are:
+
+- **Read Only ('r’)**: This mode opens the text files for reading only. The start of the file is where the handle is located. It raises the I/O error if the file does not exist. This is the default mode for opening files as well.
+
+- **Write Only ('w’)**: This mode opens the file for writing only. The data in existing files are modified and overwritten. The start of the file is where the handle is located. If the file does not already exist in the folder, a new one gets created 
+
+- **Write and Read ('w+’)**: This mode opens the file for both reading and writing. The text is overwritten and deleted from an existing file. The start of the file is where the handle is located.
+
+- **Append Only ('a’)**: This mode allows the file to be opened for writing. If the file doesn't yet exist, a new one gets created. The handle is set at the end of the file. The newly written data will be added at the end, following the previously written data.
+
+- **Append and Read (‘a+’)**: Using this method, you can read and write in the file. If the file doesn't already exist, one gets created. The handle is set at the end of the file. The newly written text will be added at the end, following the previously written data.
+
+## How to Create FIles in Python 
+In python, you use the open function with ton of the following options - 'w' or 'w' - to create a new file 
+
+- "x" – Create: this command will create a new file if and only if there is no file already in existence with that name or else it will return an error.
+
+Example of creating a file in python user the "x" command: 
+
+```python
+#creating a text file with the command function "x"
+
+f = open("myfile.txt", "x")
+
+```
+We've now created a new empty text file! But if you retry the code above – for example, if you try to create a new file with the same name as you used above (if you want to reuse the filename above) you will get an error notifying you that the file already exists. It'll look like the image below:
+
+- **"w"** – Write: this command will create a new text file whether or not there is a file in the memory with the new specified name. It does not return an error if it finds an existing file with the same name – instead it will overwrite the existing file.
+
+Example how to create a command with the "w" command:
+
+
+```python
+#creating a text file with the command function "x"
+
+f = open("myfile.txt", "x")
+
+```
+With the code above, whether the file exists or the file doesn't exist in the memory, you can still go ahead and use that code. Just keep in mind that it will overwrite the file if it finds an existing file with the same name.
+
+How to Write to a File to Python 
+
+There are two methnods of writing to a file in Python, which are:
+
+The ```Write``` method:
+This function inserts the string into the text file on a single line.
+
+Based on the file we have created above, the below line of code will insert the string into the created text file, which is "myfile.txt.”
+
+``` file.write("hello There\n)```
+
+The ``` writelines()```  method:
+This function inserts multiple strings at the same time. A list of string elements is created, and each string is then added to the text file.
+
+Using the previously created file above, the below line of code will insert the string into the created text file, which is "myfile.txt.”
+
+```f.writelines(["Hello World ", "You are welcome to Fcc\n"]) ``` 
+
+Example 
+
+he entire file.
+
+``` 
+#This program shows how to write data in a text file.
+
+file = open("myfile.txt","w")
+L = ["This is Lagos \n","This is Python \n","This is Fcc \n"]
+
+# i assigned ["This is Lagos \n","This is Python \n","This is Fcc \n"] to #variable L, you can use any letter or word of your choice.
+# Variable are containers in which values can be stored.
+# The \n is placed to indicate the end of the line.
+
+file.write("Hello There \n")
+file.writelines(L)
+file.close()
+
+# Use the close() to change file access modes
+
+``` 
+
+##How to Read From a Text File in Python 
+
+There are three methods of reading data from a text file in Python. They are
+
+The ``` read()```  method:
+
+This function returns the bytes read as a string. If no n is specified, it then reads the entire file.
+
+Example 
+
+```
+f = open("myfiles.txt", "r")
+#('r’) opens the text files for reading only
+print(f.read())
+#The "f.read" prints out the data in the text file in the shell when run.
+```
+The readline() methods:This function reads a line from a file and returns it as a string. It reads at most n bytes for the specified n. But even if n is greater than the length of the line, it does not read more than one line.
+
+``` 
+f = open("myfiles.txt", "r")
+print(f.readline())
+f = open("myfiles.txt", "r")
+
+``` 
+The ```readlines()```  method:
+This function reads all of the lines and returns them as string elements in a list, one for each line.
+
+You can read the first two lines by calling readline() twice, reading the first two lines of the file:
+
+```
+f = open("myfiles.txt", "r")
+print(f.readline())
+print(f.readline())
+```
+
+## How to Close a Text File in Python 
+It is good practice to always close the file when you are done with it.
+
+## Example of closing a text file:
+This function closes the text file when you are done modifying it:
+```
+f = open("myfiles.txt", "r")
+print(f.readline())
+f.close()
+```
+
+The close() function at the end of the code tells Python that well, I am done with this section of either creating or reading – it is just like saying End.
+
+## Example:
+
+The program below shows more examples of ways to read and write data in a text file. Each line of code has comments to help you understand what's going on:
+
+```
+# Program to show various ways to read and
+# write data in a text file.
+
+file = open("myfile.txt","w")
+L = ["This is Lagos \n","This is Python \n","This is Fcc \n"]
+
+#i assigned ["This is Lagos \n","This is Python \n","This is Fcc \n"]
+#to variable L
+  
+#The \n is placed to indicate End of Line
+
+file.write("Hello There \n")
+file.writelines(L)
+file.close()
+# use the close() to change file access modes
+
+
+
+file = open("myfile.txt","r+") 
+print("Output of the Read function is ")
+print(file.read())
+print()
+  
+# The seek(n) takes the file handle to the nth
+# byte from the start.
+file.seek(0) 
+  
+print( "The output of the Readline function is ")
+print(file.readline()) 
+print()
+  
+file.seek(0)
+  
+# To show difference between read and readline
+
+print("Output of Read(12) function is ") 
+print(file.read(12))
+print()
+
+file.seek(0)
+  
+print("Output of Readline(8) function is ") 
+print(file.readline(8))
+  
+file.seek(0)
+# readlines function
+print("Output of Readlines function is ") 
+print(file.readlines()) 
+print()
+file.close()
+
+```
+
+This is the output of the above code when run in the shell. I assigned "This is Lagos",  "This is Python", and "This is Fcc" to "L" and then asked it to print using the ''file.read''  function.
+
+The code above shows that the "readline()" function is returning the letter based on the number specified to it, while the "readlines()" function is returning every string assigned to "L" including the \n. That is, the "readlines()" function will print out all data in the file.
+
+
+![alt text](image.jpg)
+
+
+Conclusion
+Hopefully, after going through this tutorial, you should understand what file handling is in Python. We also learned the modes/methods required to create, write, read, and close() a text file using some basic examples from Python.
+
+Thanks for reading!
+
+
+## Resource
+
+[FreeCodeCamp](https://www.freecodecamp.org/news/file-handling-in-python/)
