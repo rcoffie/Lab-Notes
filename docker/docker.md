@@ -8,7 +8,7 @@ Docker is a set of platform as a service products that use OS-level virtualizati
 A Docker image is a read-only template that contains a set of instructions for creating a container that can run on the Docker platform. It provides a convenient way to package up applications and preconfigured server environments, which you can use for your own private use or share publicly with other Docker users.
 
 
-## What is a docker container 
+## What is a docker container
 Docker containers are the live, running instances of Docker images. While Docker images are read-only files, containers are life, ephemeral, executable content.
 
 
