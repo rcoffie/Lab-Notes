@@ -97,4 +97,35 @@ New-AzureADUser -DisplayName "User10" -PasswordProfile $PasswordProfile -UserPri
 ![App Screenshot](104_images/image-5.png)
 
 
-![App Screenshot](104_images/Image-6.png)
+![App Screenshot](104_images/Image-6.png) 
+
+
+# Creating Groups in Azure Active Directory 
+
+In Azure Active directory you can create two types of Groups 
+* Select Azure Active Directory 
+* Click on Groups
+  ![App Screenshot](104_images/Image-7.png) 
+* Select New Group  
+  ![App Screenshot](104_images/Image-8.png) 
+* There are two options Security groups and Office 365 Groups 
+* Select group type 
+* Create Group Name 
+* Select Member type. Note memeber type will be visible or disabled depending on your subscription 
+   * Direct Assigment
+   * Group Assigment 
+   * Rule-Based Assigment 
+* Add owners 
+* Add memebers 
+  ![App Screenshot](104_images/Image-9.png)  
+
+### Group Settings 
+* General 
+  * Self Service Goup Management 
+  * Restrict access to grops in the Access Panel 
+  * Security Groups 
+  * Office 365 Groups 
+* Expiration
+* Naming Policy
+  ![App Screenshot](104_images/Image-10.png)  
+
