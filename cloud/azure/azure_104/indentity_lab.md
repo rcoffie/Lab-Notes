@@ -1,9 +1,6 @@
 
 ## Azure Ad Lab
-
-## Installation
-
-Install my-project with npm
+OverView
 
 ```bash
   1. log into the Portal and Click on Azure Active Directory 
@@ -12,7 +9,7 @@ Install my-project with npm
 
 ## Azure Tanant 
 
-![App Screenshot](104_images/image-1.png)
+![App Screenshot](104_imaage/../104_images/Overview-AzureAD.png)
 
 ```bash
   2. Click on Azure Active Directory to lunch the Portal. 
@@ -97,4 +94,116 @@ New-AzureADUser -DisplayName "User10" -PasswordProfile $PasswordProfile -UserPri
 ![App Screenshot](104_images/image-5.png)
 
 
-![App Screenshot](104_images/Image-6.png)
+![App Screenshot](104_images/Image-6.png) 
+
+
+# Creating Groups in Azure Active Directory 
+
+In Azure Active directory you can create two types of Groups 
+* Select Azure Active Directory 
+* Click on Groups
+  ![App Screenshot](104_images/Image-7.png) 
+* Select New Group  
+  ![App Screenshot](104_images/Image-8.png) 
+* There are two options Security groups and Office 365 Groups 
+* Select group type 
+* Create Group Name 
+* Select Member type. Note memeber type will be visible or disabled depending on your subscription 
+   * Direct Assigment
+   * Group Assigment 
+   * Rule-Based Assigment 
+* Add owners 
+* Add memebers 
+  ![App Screenshot](104_images/Image-9.png)  
+
+### Group Settings 
+* General 
+  * Self Service Goup Management 
+  * Restrict access to grops in the Access Panel 
+  * Security Groups 
+  * Office 365 Groups 
+* Expiration
+* Naming Policy
+  ![App Screenshot](104_images/Image-10.png)  
+
+
+
+# Creating Groups in Azure Active Directory 
+
+In Azure Active directory you can create two types of Groups 
+* Select Azure Active Directory 
+* If you want to create a group click on Groups 
+* Select New Group  
+* There are two options Security groups and Office 365 Groups 
+* Select group type 
+* Create Group Name 
+* Select Member type. Note memeber type will be visible or disabled depending on your subscription  
+   * Direct Assigment
+   * Group Assigment 
+   * Rule-Based Assigment 
+* Add owners 
+* Add memebers 
+
+### Group Settings 
+* General 
+  * Self Service Goup Management 
+  * Restrict access to grops in the Access Panel 
+  * Security Groups 
+  * Office 365 Groups 
+* Expiration
+* Naming Policy
+
+# Creating Groups with Powershell 
+
+
+Connect to Azure Ad 
+
+```powershell
+ connect-Azuread -TenantId d4883360-2ffb-43df-ae0e-8a26b3c6d427
+```
+ 
+
+Connect Account 
+
+```powershell
+ connect-AzAccount
+```
+
+Create Group 
+
+```powershell
+ New-AzADgroup -displayname GroupName -MailNickname GroupName
+```
+## Creating group in powershell 
+
+![App Screenshot](104_images/Create_Group.png)  
+
+Group created 
+
+![App Screenshot](104_images/Group-created.png)  
+
+ 
+ Add group member 
+
+```powershell
+ Add-AzADGroupMember -MemberUserPrincipalName "test1@lccloud12hotmail.onmicrosoft.com" -TargetGroupDisplayName GroupName
+```
+
+## 
+
+![App Screenshot](104_images/Adding-User-to-group.png)  
+
+
+ Get Members of a Group
+
+```powershell
+ Get-AzADGroupMember -GroupDisplayName GroupName
+```
+
+## Screenshots
+
+![App Screenshot](104_images/Getting-Group-Members.png)  
+
+ 
+ 
+
