@@ -200,10 +200,64 @@ Group created
  Get-AzADGroupMember -GroupDisplayName GroupName
 ```
 
-## Screenshots
 
 ![App Screenshot](104_images/Getting-Group-Members.png)  
 
  
  
+
+# Azure Goveernance & Compliance 
+
+### What is Management Group 
+Management groups are containers that help you manage access, policy, and compliance across multiple subscriptions
+
+
+**Creating Management Group**  
+
+
+* Open Azure Portal 
+* Search for Manage in search box 
+
+![App Screenshot](104_images/Searching-Management-Group.png)  
+* Select Create
+![App Screenshot](104_images/Selecting%20Create.png)  
+
+* Select Add Management Group 
+
+![App Screenshot](104_images/Creating%20Management-Group.png)
+
+* Add management Group ID and Management Group Display Name 
+* After that save and Refresh
+
+![App Screenshot](104_images/Management%20Group%20Created.png)
+
+### Create Management Group Using Powershell 
+* Open powershell , this time we are going to use cloud shell 
+
+
+![App Screenshot](104_images/Select-cloud-shell-azure-portal.png)
+
+![App Screenshot](104_images/open-shell.png)
+
+![App Screenshot](104_images/Lunching-Powershell-portal.png)
+
+* Creating Management Group in Powershell 
+
+```powershell 
+  New-AzManagmentGroup -groupname "Group Name" -displayname "DisplayName" 
+```
+
+![App Screenshot](104_images/creating-Management%20Group%20in%20Powershell.png)
+
+* List Management Groups note is the management does not appear on powershell, refresh management group from the portal 
+
+```powershell 
+  get-azmanagementgroup 
+```
+
+![App Screenshot](104_images/List-Management-Group.png)
+    
+
+
+    
 
