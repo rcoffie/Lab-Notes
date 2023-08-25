@@ -257,7 +257,21 @@ Management groups are containers that help you manage access, policy, and compli
 
 ![App Screenshot](104_images/List-Management-Group.png)
     
+### Creatomg user with Azure Powershell 
+* Create a password variable to encrypt password 
+* call password variable to confirm if password has been encrypted 
+* Create user and set password to the password variable 
+```powershell 
+  $password = ConvertTo-SecureString -string "Password" -AsPlainText -force 
+  $password 
+  new-azaduser -DisplayName "Mary Ann" -UserPrincipalName "Mary.ann.yourdoamin.com" -Password $password - MailNickname "Mary"
 
+
+```
+
+![App Screenshot](104_images/User-Azure-Powershell.png)
+
+![App Screenshot](104_images/AU-Created.png)
 
     
 
